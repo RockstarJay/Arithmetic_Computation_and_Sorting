@@ -5,11 +5,13 @@ read -p "Enter The value for a : " a
 read -p "Enter The value for b : " b
 read -p "Enter The value for c : " c
 
+declare -A dict
 compute1=$((a+b*c))
 compute2=$((a*b+c))
 compute3=$((c+a/b))
 compute4=$((a%b+c))
-echo "The First Computation : "$compute1
-echo "The Second Computation : "$compute2
-echo "The Third Computation : "$compute3
-echo "The Fourth Computation : "$compute4
+dict[0]=$compute1
+dict[1]=$compute2
+dict[2]=$compute3
+dict[3]=$compute4
+echo "The Computations are: ${dict[@]}"
